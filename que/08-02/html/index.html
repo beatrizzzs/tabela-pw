@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="sortcut icon" href="img/icon.png" type="image/x-icon" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PW III - 2022</title>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="../img/logo.png" width="350" height="100" class="d-inline-block " alt="">
+        </a>
+    </nav>
+    <div class="titulo">
+    Tabela de Notas
+    </div>
+    <div class="tabela">
+        <table id="tbl">
+            <tr>
+                <th> Nome </th>
+                <th> CPF </th>
+                <th> Nota 1 </th>
+                <th> Nota 2 </th>
+                <th> Nota 3 </th>
+                <th> Média </th>
+            </tr>
+            <?php 
+            
+            
+            foreach($alunos as $aluno){?> 
+            <tr>
+                <td id="nome"> <?php echo $aluno->getNome();?> </td>
+                <td id="nota1"> <?php echo $aluno->getNota1();?> </td>
+                <td id="nota2"> <?php echo $aluno->getNota2();?> </td>
+                <td id="nota3"> <?php echo $aluno->getNota3();?> </td>
+                <td id="media"> <?php echo $aluno->calcularMedia();?> </td>
+                <td id="status"> <?php echo $aluno->filtrarNotas($aluno->calcularMedia());?></td>
+            </tr>
+            <?php } ?> 
+        </table>
+    </div>
+</body>
+</html>

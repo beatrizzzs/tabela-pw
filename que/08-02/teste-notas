@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "90326e75-fff6-437b-a6de-5110d47c0148",
+		"name": "testeAPI_aluno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21568946"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
